@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: demo-app-juiceshop
-  name: demo-app-ajuiceshop-service
+  namespace: app-juiceshop-web-dev
+  name: app-juiceshop-web-dev-service
 spec:
   ports:
     - port: 80
       targetPort: 8080
       protocol: TCP
   selector:
-    app.kubernetes.io/name: demo-app-juiceshop
+    app.kubernetes.io/name: app-juiceshop-web-dev
 ---

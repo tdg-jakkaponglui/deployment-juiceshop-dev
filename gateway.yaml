@@ -1,8 +1,8 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  namespace: demo-app-juiceshop
-  name: demo-app-juiceshop-gateway
+  namespace: app-juiceshop-web-dev
+  name: app-juiceshop-web-dev-gateway
 spec:
   selector:
     istio: ingress-gateway-01
@@ -17,19 +17,19 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  namespace: demo-app-juiceshop
-  name: demo-app-juiceshop-virtualservice
+  namespace: app-juiceshop-web-dev
+  name: app-juiceshop-web-dev-virtualservice
 spec:
   hosts:
   - "*"
   gateways:
-  - demo-app-juiceshop-gateway
+  - app-juiceshop-web-dev-gateway
   http:
   - match:
     - uri:
         prefix: /
     route:
     - destination:
-        host: demo-app-juiceshop-service
+        host: app-juiceshop-web-dev-service
         port:
           number: 80
