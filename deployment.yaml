@@ -16,7 +16,7 @@ spec:
         app.kubernetes.io/name: app-juiceshop-web-dev
     spec:
       containers:
-      - image: asia-southeast1-docker.pkg.dev/tdg-sec-non-prod-bnxe/devsecops-poc/app-juiceshop-web:11
+      - image: asia-southeast1-docker.pkg.dev/tdg-sec-non-prod-bnxe/devsecops-poc/app-juiceshop-web:12
         imagePullPolicy: Always
         name: app-juiceshop-web-dev
         ports:
